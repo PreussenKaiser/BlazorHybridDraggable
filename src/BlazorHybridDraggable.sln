@@ -4,6 +4,10 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorHybridDraggable.Mobile", "BlazorHybridDraggable.Mobile\BlazorHybridDraggable.Mobile.csproj", "{1737DCAB-6174-48EE-BE9E-7C860CFB6369}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHybridDraggable.Components", "BlazorHybridDraggable.Components\BlazorHybridDraggable.Components.csproj", "{7AB5A1B6-0782-489D-8E4D-680007ED1234}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorHybridDraggable.Web", "BlazorHybridDraggable.Web\BlazorHybridDraggable.Web.csproj", "{BCA67C1C-2B11-4023-BAB4-42CF10EA6078}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,6 +20,14 @@ Global
 		{1737DCAB-6174-48EE-BE9E-7C860CFB6369}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1737DCAB-6174-48EE-BE9E-7C860CFB6369}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1737DCAB-6174-48EE-BE9E-7C860CFB6369}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7AB5A1B6-0782-489D-8E4D-680007ED1234}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AB5A1B6-0782-489D-8E4D-680007ED1234}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AB5A1B6-0782-489D-8E4D-680007ED1234}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AB5A1B6-0782-489D-8E4D-680007ED1234}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCA67C1C-2B11-4023-BAB4-42CF10EA6078}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCA67C1C-2B11-4023-BAB4-42CF10EA6078}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCA67C1C-2B11-4023-BAB4-42CF10EA6078}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCA67C1C-2B11-4023-BAB4-42CF10EA6078}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

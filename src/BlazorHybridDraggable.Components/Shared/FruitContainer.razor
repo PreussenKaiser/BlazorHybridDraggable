@@ -1,0 +1,44 @@
+﻿@using BlazorHybridDraggable.Components.Models
+
+<CascadingValue Value="this">
+    @this.ChildContent
+</CascadingValue>
+
+@code
+{
+    /// <summary>
+    /// Gets or sets fruits in the list.
+    /// </summary>
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+
+    /// <summary>
+    /// Gets or sets the event to call when a fruit is updated.
+    /// </summary>
+    [Parameter]
+    public EventCallback OnUpdate { get; set; }
+
+    /// <summary>
+    /// Gets or sets the container's list of fruit.
+    /// </summary>
+    [Parameter]
+    public IEnumerable<Fruit> List { get; set; }
+
+    /// <summary>
+    /// Gets or sets the dragged fruit.
+    /// </summary>
+    public Fruit Payload { get; set; }
+
+    /// <summary>
+    /// Updates a fruit.
+    /// </summary>
+    /// <param name="newStatus">The fruit's new status.</param>
+    public async Task UpdateFruitAsync(FruitStatus newStatus)
+    {
+        if (this.Payload is null)
+            return;
+
+        this.Payload.Status = newStatus;
+        await this.OnUpdate.InvokeAsync();
+    }
+}

@@ -1,0 +1,51 @@
+﻿@using BlazorHybridDraggable.Components.Models
+
+<div class="list-group border border-3 border-primary p-3"
+     ondragover="event.preventDefault();"
+     ondragstart="event.dataTransfer.setData('', event.target.id);"
+     @ondrop="async () => await this.Container.UpdateFruitAsync(this.ListStatus)">
+
+    @foreach (var f in this.list)
+    {
+        <div class="draggable list-group-item list-group-item-action active"
+             draggable="true" title="@f.Name"
+             @ondragstart="() => this.Container.Payload = f">
+
+            <h5 class="mb-1">
+                @f.Name
+            </h5>
+            <div class="d-flex justify-content-between">
+                <p>
+                    @f.Description
+                </p>
+                <img class="w-25" src="@f.ImageUrl"/>
+            </div>
+        </div>
+    }
+</div>
+
+@code
+{
+    /// <summary>
+    /// Gets or sets the list's container.
+    /// </summary>
+    [CascadingParameter]
+    public FruitContainer Container { get; set; }
+
+    /// <summary>
+    /// Gets or sets the list's status.
+    /// </summary>
+    [Parameter]
+    public FruitStatus ListStatus { get; set; }
+
+    /// <summary>
+    /// Gets or sets fruits in the list.
+    /// </summary>
+    private IEnumerable<Fruit> list;
+
+    /// <summary>
+    /// Initializes the list.
+    /// </summary>
+    protected override void OnParametersSet()
+        => this.list = this.Container.List.Where(f => f.Status == this.ListStatus);
+}

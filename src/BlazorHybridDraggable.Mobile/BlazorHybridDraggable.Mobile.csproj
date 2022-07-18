@@ -49,4 +49,8 @@
         <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\BlazorHybridDraggable.Components\BlazorHybridDraggable.Components.csproj" />
+    </ItemGroup>
+
 </Project>

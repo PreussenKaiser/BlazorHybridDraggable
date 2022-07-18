@@ -1,4 +1,4 @@
-namespace BlazorHybridDraggable.Mobile.Data;
+namespace BlazorHybridDraggable.Components.Data;
 
 public class WeatherForecast
 {

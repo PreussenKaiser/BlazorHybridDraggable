@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Components.WebView.Maui;
-using BlazorHybridDraggable.Mobile.Data;
+﻿using BlazorHybridDraggable.Components.Data;
 
 namespace BlazorHybridDraggable.Mobile;
 
@@ -16,7 +15,7 @@ public static class MauiProgram
 			});
 
 		builder.Services.AddMauiBlazorWebView();
-		#if DEBUG
+#if DEBUG
 		builder.Services.AddBlazorWebViewDeveloperTools();
 #endif
 		
